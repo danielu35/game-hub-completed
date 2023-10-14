@@ -22,8 +22,8 @@ const GameDetailsPage = () => {
         <GameAttributes game={game} />
       </Container>
       <Container>
-        <Trailer gameId={game?.id} />
-        <ScreenShots gameId={game?.id} />
+        <Trailer gameId={game?.id!} />
+        <ScreenShots gameId={game?.id!} />
       </Container>
     </SimpleGrid>
   );

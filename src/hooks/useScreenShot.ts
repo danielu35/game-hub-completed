@@ -8,7 +8,7 @@ const useScreenShot = (gameId: number) => {
     return useQuery({
         queryKey: ['screenShot', gameId],
         queryFn: () => apiClient.getAll()
-    })
-}
+    });
+};
 
 export default useScreenShot;
