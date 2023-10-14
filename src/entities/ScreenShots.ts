@@ -1,7 +1,6 @@
-export default interface ScreenShots {
-    id: number;
-    image: string;
-    hidden: boolean;
-    width: number;
-    height: number;
+export default interface Screenshot {
+  id: number;
+  image: string;
+  width: number;
+  height: number;
 }

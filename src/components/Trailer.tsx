@@ -1,20 +1,20 @@
-import useTrailer from "../hooks/useTrailer";
+import useTrailers from "../hooks/useTrailer";
 
 interface Props {
   gameId: number;
 }
 
-const Trailer = ({ gameId }: Props) => {
-  const { data, error, isLoading } = useTrailer(gameId);
+const GameTrailer = ({ gameId }: Props) => {
+  const { data, error, isLoading } = useTrailers(gameId);
 
   if (isLoading) return null;
+
   if (error) throw error;
 
   const first = data?.results[0];
-
   return first ? (
-    <video src={first.data.max} poster={first.preview} controls />
+    <video src={first.data[480]} poster={first.preview} controls />
   ) : null;
 };
 
-export default Trailer;
+export default GameTrailer;
